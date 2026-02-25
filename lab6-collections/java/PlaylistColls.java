@@ -65,8 +65,9 @@ public class PlaylistColls {
         Piece piece1 = new Piece("Moonlight", "C. Arrau", 17 * 60 + 26f);
         Piece piece2 = new Piece("Pathetique", "D. Barenboim", 16 * 60 + 49f);
         Advert advert1 = new Advert(new Product("Bounty", "Mars"), 15.0f);
+        Piece piece3 = new Piece("Short Piece", "N. Hoo", 19.5f); 
 
-        List<Item> playlist1 = Arrays.asList(new Item[] { piece1, advert1, piece2 });
+        List<Item> playlist1 = Arrays.asList(new Item[] { piece1, advert1, piece2, piece3 });
         System.out.printf("playlist1 = %s\n", playlist1);
 
         // use mapping to extract all lengths from playlist1:
@@ -103,11 +104,11 @@ public class PlaylistColls {
 
         List<Float> shortItemLengths1 = new ArrayList<>();
         // TASK 6-1(b)...
-
-
-
-
-
+        for (Item item : playlist1){
+            if (item.length_secs < 20){
+                shortItemLengths1.add(item.length_secs); 
+            }
+        }
 
         System.out.printf("shortItemLengths1 = %s\n", shortItemLengths1);
 
