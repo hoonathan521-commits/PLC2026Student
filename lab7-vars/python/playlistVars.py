@@ -55,6 +55,7 @@ def definePlaylist1():
     piece1 = Piece("Moonlight", "C. Arrau", 17*60+26.0)
     piece2 = Piece("Pathetique", "D. Barenboim", 16*60+49.0)
     advert1 = Advert(Product("chocolate", "Yummm"), 15.0)
+    global playlist1 
     playlist1 = [piece1, advert1, piece2]
     # TASK 7.3 b: fix the bug related to the scope and declaration of playlist1
     # you may ONLY edit the body of this function ("definePlaylist1"), no other code in playlistVars.py
